@@ -18,52 +18,82 @@ https://drive.google.com/file/d/1qH6jfWym0Wjg9KKCPQto7MZr0VWM9QpF/view?usp=shari
 
 #### 1. Prepare master dataset of images and metadata
 ##### Step 1 Unify all 5 datasets
-python src/data-prep/02-data-prep-master.py 
 
+```
+python src/data-prep/02-data-prep-master.py 
+```
 
 ##### Step 2 Identify and remove duplicate images 
+
+```
 python src/data-prep/03-duplicate-identify.py 
 python src/data-prep/03-duplicate-remove.py
+```
 
 ##### Step 3 Split datasets
+```
 python src/data-prep/04-split-dataset.py
+```
 
 ##### Step 4 Map classes
+```
 python src/data-prep/05-class-mapping.py
+```
 
 #### 2. Prepare Questions-Answers for various question types
 ##### Prepare count based questions
+```
 python src/question-generation/count-based/Q-count.py
+```
 
 ##### Prepare spatial count based questions
+```
 python src/question-generation/count-based/Q-count-complex.py
+```
 
 ##### Prepare junction based questions
+```
 python src/question-generation/junction-based/Q-junction.py
+```
 
 ##### Prepare position based questions
+```
 python src/question-generation/junction-based/Q-position.py
+```
 
 ##### Prepare value based questions
+```
 python src/question-generation/value-based/00-bounding-box.py
 python src/question-generation/value-based/01-dist-calc.py
 python src/question-generation/value-based/02-Q-value-based.py
+```
 
 #### 3. Prepare master VQA datasets
 ##### Prepare master VQA dataset
+```
 python src/question-generation/master-data.py
+```
 
 ##### Prepare master VQA dataset for OCR and Description experiments
+```
 python src/question-generation/master-data-desc-ocr.py
+```
+
 
 ##### Prepare master VQA dataset for Bounindg box experiments
+```
 python src/question-generation/master-data-bbox.py
+```
 
 ##### Prepare master VQA dataset for Bounindg box segments experiments
+```
 python src/question-generation/master-data-bbox-segment.py
+```
 
 ##### Prepare class weights for weighted cross entropy experiments
+```
 python src/question-generation/master-data-classweights.py
+```
 
 
 ## Section 2 : Run Generative - Fine tuning and instruction tuned models 

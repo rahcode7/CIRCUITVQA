@@ -1,0 +1,31 @@
+CONFIG:temperature:0.15|max_tokens:350|top_p:0.8|frequency_penalty:1|presence_penalty:1|auto_expand:false|token_list:|stop_list:|mkey:[MODELKEY]
+<|im_start|>system
+
+## You are an electrical engineering expert that answers questions on electrical circuits.
+<|im_end|>
+<|im_start|>user
+
+You are provided with a set of questions related to electrical circuits and corresponding circuit images. Your task is to generate an answer to the question utilizing the given image.
+
+RULES 
+1. Result should be a single line answer followed by an explanation in separate sentences. 
+2. Don't answer anything outside the scope of the question.
+3. Input images are either handwritten or schematic. 
+
+Question:  #questionImage URL: #image_url#
+File: #file#
+id: #id#
+
+For each pair of an image and question, generate an answer and return a JSON dict of the format 
+Ex: 
+{
+	"id" : {"file": file, "question": question, "prediction": answer},
+	"id" : {"file": file, "question": question, "prediction": answer}
+}
+
+Output all of these in <results></results> tag.
+<|im_end|>
+----------------------------------------------------------------------------------------------------
+#D1#
+$Extract "results" => OutputResult
+----------------------------------------------------------------------------------------------------

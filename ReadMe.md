@@ -1,6 +1,8 @@
 
 # Circuit-VQA: A Visual Question Answering Dataset for Electrical Circuit Images (Accepted at ECML-PKDD,2024)
 
+![Alt text](src/visualizations/circuit-image.png?raw=true")
+
 ## Downloads
 
 #### Question-Answer Pairs

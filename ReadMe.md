@@ -3,6 +3,11 @@
 
 ![Alt text](src/visualizations/circuit-image.png?raw=true")
 
+
+## License
+All content and the datasets is licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless
+otherwise stated.
+
 ## Downloads
 
 #### Question-Answer Pairs
